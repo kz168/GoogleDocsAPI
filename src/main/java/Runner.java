@@ -1,3 +1,4 @@
+import clientAPI.GSheetsAPI;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -17,7 +18,7 @@ public class Runner {
 		String spreadsheetUrl = "https://docs.google.com/spreadsheets/d/136TZW6b2AXbAFLxZPTGk0NHO7Cuh69qPrWJtMKGRKn8/edit#gid=96910449";
 		GSheetsAPI api = GSheetsAPI.getInstance();
 		File csvFile = new File("/home/ws5103/GAppsScriptProject/Data/testCSV.csv");
-		
+
 		/*CSVParser parser = CSVParser.parse(csvFile, Charset.defaultCharset(),CSVFormat.RFC4180.withHeader(
 				"Task No.","Task Title","Date","Tracked Time","Chargeable Time","Company","Project","Person","Comment","Activity Types"
 		).withIgnoreHeaderCase());*/
@@ -31,7 +32,8 @@ public class Runner {
 
 		for(CSVRecord csvRecord : parser){
 			List<Object> row;
-			Object[] rowValue = {csvRecord.get("Task No."),
+			Object[] rowValue = {
+					csvRecord.get("Task No."),
 					csvRecord.get("Task Title"),
 					csvRecord.get("Date"),
 					csvRecord.get("Chargeable Time"),

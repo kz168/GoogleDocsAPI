@@ -1,3 +1,5 @@
+package clientAPI;
+
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.HttpTransport;
@@ -6,6 +8,7 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.model.*;
+import token.AuthorizeToken;
 import utils.Range;
 
 import java.io.IOException;
@@ -19,11 +22,11 @@ public class GSheetsAPI {
     private static GSheetsAPI instance;
     /** Application name. */
     private static final String APPLICATION_NAME =
-        "Google Apps Script API Java GSheetsAPI";
+        "Google Apps Script API Java clientAPI.GSheetsAPI";
 
     /** Directory to store user credentials for this application. */
     private static final java.io.File DEFAULT_DATA_STORE_DIR = new java.io.File(
-        "./src/main/credentials/Google-API-Access-Credentials(Google Sheets)");
+        "./credentials/Google-API-Access-Credentials(Google Sheets)");
 
     /** Global instance of the {@link FileDataStoreFactory}. */
     private static FileDataStoreFactory DATA_STORE_FACTORY;
@@ -280,7 +283,7 @@ public class GSheetsAPI {
                 .setValueInputOption(valueInputOption)
                 .setInsertDataOption("INSERT_ROWS")
                 .execute();
-        System.out.printf("%d cells appended.", result.getUpdates().getUpdatedCells());
+        System.out.printf("%d rows appended.", result.getUpdates().getUpdatedRows());
     }
 
     public String createSpreadSheet() throws IOException{
@@ -373,7 +376,7 @@ public class GSheetsAPI {
 
         BatchUpdateSpreadsheetResponse responseForDelete = service.spreadsheets().batchUpdate(spreadSheetId,content).execute();
         if(responseForDelete.getReplies().get(0).isEmpty()){
-            System.out.println((endIndex-(startIndex+1)) + " rows deleted");
+            System.out.println((endIndex-startIndex) + " rows deleted");
         }
     }
 

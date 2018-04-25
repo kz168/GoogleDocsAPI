@@ -1,3 +1,5 @@
+package clientAPI;
+
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.HttpTransport;
@@ -5,6 +7,7 @@ import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.drive.Drive;
+import token.AuthorizeToken;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -21,7 +24,7 @@ public class GDriveAPI {
 
 	/** Application name. */
 	private static final String APPLICATION_NAME =
-			"Google Apps Script API Java GDriveAPI";
+			"Google Apps Script API Java clientAPI.GDriveAPI";
 
 	/** Directory to store user credentials for this application. */
 	private static final java.io.File DEFAULT_DATA_STORE_DIR = new java.io.File(
