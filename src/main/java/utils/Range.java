@@ -45,6 +45,9 @@ public class Range {
 
 	public String toString(){
 		if(getFirstCellPointer().isEmpty() || getLastCellPointer().isEmpty()){
+			if(getFirstCellPointer().isEmpty() && getLastCellPointer().isEmpty()){
+				return sheetTitle;
+			}
 			if(getFirstCellPointer().isEmpty()){
 				return sheetTitle + "!" + getLastCellPointer();
 			}
@@ -55,6 +58,5 @@ public class Range {
 		}
 
 		return sheetTitle + "!" + getFirstCellPointer() + ":" + getLastCellPointer();
-
 	}
 }

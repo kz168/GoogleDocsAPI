@@ -247,7 +247,7 @@ public class GSheetsAPI {
             service.spreadsheets().values().update(spreadSheetId, rangeValue, body)
                 .setValueInputOption(valueInputOption)
                 .execute();
-        System.out.printf("%d cells updated.", result.getUpdatedCells());
+        System.out.println(result.getUpdatedCells() + " cells updated");
     }
 
     /**append data after the table formed by specified range and
@@ -283,7 +283,7 @@ public class GSheetsAPI {
                 .setValueInputOption(valueInputOption)
                 .setInsertDataOption("INSERT_ROWS")
                 .execute();
-        System.out.printf("%d rows appended.", result.getUpdates().getUpdatedRows());
+        System.out.println(result.getUpdates().getUpdatedRows() + " rows appended");
     }
 
     public String createSpreadSheet() throws IOException{
@@ -413,7 +413,7 @@ public class GSheetsAPI {
         Range range = new Range(sheetTitle);
         range.setFirstCellPointer("A2");
         range.setLastCellPointer("F2");
-        appendDataAfterRange(spreadSheetUrl,range,appendData,"USER_ENTERED");
+        appendDataAfterRange(spreadSheetUrl,range,appendData,"RAW");
         int sumValueCell = (appendData.size()+10);
         String sumData = "=SUM(D2:" + "D" + sumValueCell + ")" ;
         List<List<Object>> updateSumValue = Arrays.asList(

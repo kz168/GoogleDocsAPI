@@ -4,6 +4,7 @@ import com.astronlab.ngenhttplib.http.core.request.InvokerRequestBody
 import org.apache.commons.csv.CSVFormat
 import org.apache.commons.csv.CSVParser
 import org.apache.commons.csv.CSVRecord
+import utils.Range
 
 import java.nio.charset.Charset
 
@@ -57,27 +58,37 @@ class AutoSheetUpdate{
 		File dataFile = createDataFile("./Data/dataCSV.csv",csvData)
 
 		CSVParser parser = CSVParser.parse(dataFile, Charset.defaultCharset(),
-				CSVFormat.RFC4180
+				CSVFormat.DEFAULT
 						.withFirstRecordAsHeader()
 						.withIgnoreHeaderCase());
 
 		List<List<Object>> values = new ArrayList<>();
-
+		List<List<Object>> hourValue = new ArrayList<>();
+		def defaultTimeValue = "00:00"
 		for(CSVRecord csvRecord : parser){
 			List<Object> row;
 			Object[] rowValue = [
 				csvRecord.get("Task No."),
 				csvRecord.get("Task Title"),
 				csvRecord.get("Date"),
-				csvRecord.get("Chargeable Time"),
+        defaultTimeValue,
 				csvRecord.get("Person"),
 				csvRecord.get("Activity Types")
 			];
 			row = Arrays.asList(rowValue);
 			values.add(row);
+
+			rowValue = [
+					csvRecord.get("Chargeable Time")
+			]
+			row = Arrays.asList(rowValue)
+			hourValue.add(row)
 		}
 
 		gSheetApi.clearAndAppend(spreadsheetUrl,sheetTitle,values);
+		Range range = new Range(sheetTitle,"D2","D" + (hourValue.size() + 1))
+
+		gSheetApi.updateDataToRange(spreadsheetUrl,range,hourValue,"USER_ENTERED")
 	}
 
 	def createDataFile(String path,String data){

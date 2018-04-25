@@ -17,7 +17,7 @@ public class Runner {
 	public static void main(String[] args) throws IOException{
 		String spreadsheetUrl = "https://docs.google.com/spreadsheets/d/136TZW6b2AXbAFLxZPTGk0NHO7Cuh69qPrWJtMKGRKn8/edit#gid=96910449";
 		GSheetsAPI api = GSheetsAPI.getInstance();
-		File csvFile = new File("/home/ws5103/GAppsScriptProject/Data/testCSV.csv");
+		File csvFile = new File("/home/ws5103/GAppsScriptProject/Data/dataCSV.csv");
 
 		/*CSVParser parser = CSVParser.parse(csvFile, Charset.defaultCharset(),CSVFormat.RFC4180.withHeader(
 				"Task No.","Task Title","Date","Tracked Time","Chargeable Time","Company","Project","Person","Comment","Activity Types"

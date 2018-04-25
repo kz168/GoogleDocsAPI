@@ -2,24 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="945f7b4a-8ce2-4203-8a2b-c7c132f1af91" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/testCSV.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Downloads/dataFile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Downloads/datafile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Downloads/downLoadedfile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/AuthorizeToken$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/AuthorizeToken$AuthorizationBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/AuthorizeToken.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/GDriveAPI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/GSheetsAPI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/credentials/Google-API-Access-Credentials(Google Drive)/StoredCredential" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/credentials/Google-API-Access-Credentials(Google Sheets)/StoredCredential" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/AuthorizeToken.java" afterPath="$PROJECT_DIR$/src/main/java/token/AuthorizeToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/GDriveAPI.java" afterPath="$PROJECT_DIR$/src/main/java/clientAPI/GDriveAPI.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/GSheetsAPI.java" afterPath="$PROJECT_DIR$/src/main/java/clientAPI/GSheetsAPI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/AutoSheetUpdate.class" afterPath="$PROJECT_DIR$/build/classes/java/main/AutoSheetUpdate.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/Runner.class" afterPath="$PROJECT_DIR$/build/classes/java/main/Runner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/autoSheetUpdate.class" afterPath="$PROJECT_DIR$/build/classes/java/main/autoSheetUpdate.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/clientAPI/GSheetsAPI.class" afterPath="$PROJECT_DIR$/build/classes/java/main/clientAPI/GSheetsAPI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/credentials/Google-API-Access-Credentials(Google Sheets)/StoredCredential" afterPath="$PROJECT_DIR$/credentials/Google-API-Access-Credentials(Google Sheets)/StoredCredential" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/GAppsScriptProject_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/GAppsScriptProject_main.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Groovy/autoSheetUpdate.groovy" afterPath="$PROJECT_DIR$/src/main/Groovy/autoSheetUpdate.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Runner.java" afterPath="$PROJECT_DIR$/src/main/java/Runner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clientAPI/GSheetsAPI.java" afterPath="$PROJECT_DIR$/src/main/java/clientAPI/GSheetsAPI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/Range.java" afterPath="$PROJECT_DIR$/src/main/java/utils/Range.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -79,9 +75,11 @@
       <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="130" />
-              <folding />
+            <state relative-caret-position="418">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,8 +87,8 @@
       <file leaf-file-name="autoSheetUpdate.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Groovy/autoSheetUpdate.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-373">
-              <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+            <state relative-caret-position="1650">
+              <caret line="90" column="4" lean-forward="false" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -98,11 +96,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Range.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/Range.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="895">
+              <caret line="60" column="2" lean-forward="false" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GDriveAPI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/clientAPI/GDriveAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="106" column="2" lean-forward="false" selection-start-line="106" selection-start-column="2" selection-end-line="120" selection-end-column="5" />
+            <state relative-caret-position="1958">
+              <caret line="89" column="24" lean-forward="false" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,8 +131,8 @@
       <file leaf-file-name="GSheetsAPI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/clientAPI/GSheetsAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="378" column="31" lean-forward="false" selection-start-line="378" selection-start-column="31" selection-end-line="378" selection-end-column="31" />
+            <state relative-caret-position="1386">
+              <caret line="249" column="69" lean-forward="false" selection-start-line="249" selection-start-column="69" selection-end-line="249" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -436,7 +444,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4570076270000" />
+        <entry key="$PROJECT_DIR$" value="4570508227000" />
         <entry key="$PROJECT_DIR$/API_MODULE/build.gradle" value="1606984828" />
         <entry key="$PROJECT_DIR$/Task_Impl_Module/build.gradle" value="1606984828" />
         <entry key="$PROJECT_DIR$/build.gradle" value="583341617" />
@@ -648,17 +656,17 @@
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/API_MODULE/src/main/java/utils/Range.java" />
         <option value="$PROJECT_DIR$/src/main/java/GDriveAPI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/Range.java" />
         <option value="$PROJECT_DIR$/src/main/java/GSheetsAPI.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/HttpInvoker.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/token/AuthorizeToken.java" />
         <option value="$PROJECT_DIR$/src/main/java/ClientAPI/GSheetsAPI.java" />
         <option value="$PROJECT_DIR$/src/main/java/ClientAPI/GDriveAPI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Runner.java" />
         <option value="$PROJECT_DIR$/src/main/java/autoSheetUpdate.groovy" />
+        <option value="$PROJECT_DIR$/src/main/java/Runner.java" />
         <option value="$PROJECT_DIR$/src/main/java/clientAPI/GSheetsAPI.java" />
         <option value="$PROJECT_DIR$/src/main/Groovy/autoSheetUpdate.groovy" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/Range.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -709,10 +717,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -724,15 +728,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Groovy" />
+              <option name="myItemId" value="Data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1006,7 +1002,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="61" y="-4" width="1859" height="1084" extended-state="6" />
+    <frame x="61" y="-4" width="1859" height="1084" extended-state="7" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1085,8 +1081,38 @@
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Groovy/autoSheetUpdate.groovy</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/clientAPI/GSheetsAPI.java</url>
+          <line>411</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/clientAPI/GSheetsAPI.java</url>
+          <line>256</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/clientAPI/GSheetsAPI.java</url>
+          <line>220</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Groovy/autoSheetUpdate.groovy</url>
+          <line>88</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="35" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1095,16 +1121,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/clientAPI/GSheetsAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TASK_MODULE/build.gradle" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/client_secret.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -1263,25 +1279,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Range.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
-          <folding>
-            <element signature="e#207#208#0" expanded="false" />
-            <element signature="e#242#243#0" expanded="false" />
-            <element signature="e#485#486#0" expanded="false" />
-            <element signature="e#509#510#0" expanded="false" />
-            <element signature="e#558#559#0" expanded="false" />
-            <element signature="e#593#594#0" expanded="false" />
-            <element signature="e#633#634#0" expanded="false" />
-            <element signature="e#663#664#0" expanded="false" />
-            <element signature="e#810#811#0" expanded="false" />
-            <element signature="e#839#840#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/HttpInvoker.java" />
     <entry file="jar://$PROJECT_DIR$/lib/ngenhttplib-all-1.0.jar!/okhttp3/Request.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -1301,13 +1298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/ngenhttplib-all-1.0.jar!/com/astronlab/ngenhttplib/http/core/HttpInvoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1358,19 +1348,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="130" />
-          <folding />
+        <state relative-caret-position="418">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1382,20 +1366,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Range.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="895">
+          <caret line="60" column="2" lean-forward="false" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/clientAPI/GDriveAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="106" column="2" lean-forward="false" selection-start-line="106" selection-start-column="2" selection-end-line="120" selection-end-column="5" />
+        <state relative-caret-position="1958">
+          <caret line="89" column="24" lean-forward="false" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/ngenhttplib-all-1.0.jar!/com/astronlab/ngenhttplib/http/core/HttpInvoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/ngenhttplib-all-1.0.jar!/com/astronlab/ngenhttplib/http/utils/UserAgentSwitcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/clientAPI/GSheetsAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="378" column="31" lean-forward="false" selection-start-line="378" selection-start-column="31" selection-end-line="378" selection-end-column="31" />
+        <state relative-caret-position="1386">
+          <caret line="249" column="69" lean-forward="false" selection-start-line="249" selection-start-column="69" selection-end-line="249" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1404,8 +1420,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Groovy/autoSheetUpdate.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-373">
-          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="1650">
+          <caret line="90" column="4" lean-forward="false" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
