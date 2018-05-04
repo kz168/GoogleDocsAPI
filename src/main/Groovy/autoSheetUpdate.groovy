@@ -86,6 +86,7 @@ class AutoSheetUpdate{
 		}
 
 		gSheetApi.clearAndAppend(spreadsheetUrl,sheetTitle,values);
+
 		Range range = new Range(sheetTitle,"D2","D" + (hourValue.size() + 1))
 
 		gSheetApi.updateDataToRange(spreadsheetUrl,range,hourValue,"USER_ENTERED")

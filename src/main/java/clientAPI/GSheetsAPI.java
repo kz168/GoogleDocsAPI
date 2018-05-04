@@ -286,6 +286,7 @@ public class GSheetsAPI {
         System.out.println(result.getUpdates().getUpdatedRows() + " rows appended");
     }
 
+    /*Create a new SpreadSheet*/
     public String createSpreadSheet() throws IOException{
         Spreadsheet requestBody = new Spreadsheet();
 
@@ -296,6 +297,14 @@ public class GSheetsAPI {
         return response.getSpreadsheetUrl();
     }
 
+    /**Append Data at the end sheet
+     *
+     * @param spreadSheetUrl url of the desired spreadsheet
+     * @param sheetTitle title of the desired sheet inside the spreadsheet
+     * @param appendData Data to be appended
+     * @param valueInputOption RAW or USER_ENTERED depending on the parsing of data in server side
+     * @throws IOException
+     */
     public void appendData(String spreadSheetUrl,String sheetTitle,List<List<Object>> appendData,String valueInputOption)throws IOException{
         Pattern pattern = Pattern.compile("(?is)d/([^/]+)/(?:.*?gid=([^$]+))?");
         Matcher matchID = pattern.matcher(spreadSheetUrl);
@@ -329,6 +338,14 @@ public class GSheetsAPI {
 
     }
 
+    /**Downloads the desired spreadsheet
+     *
+     * @param spreadSheetUrl url of the desired spreadsheet
+     * @param nameOfDownloadFile Name of the file to be downloaded
+     * @throws IOException
+     */
+
+
     public void downloadSpreadSheet(String spreadSheetUrl,String nameOfDownloadFile)throws IOException{
         GDriveAPI gDriveAPI = GDriveAPI.getInstance();
 
@@ -342,6 +359,16 @@ public class GSheetsAPI {
 
         gDriveAPI.DownloadFile(spreadSheetId,nameOfDownloadFile);
     }
+
+    /**Clears the row according to set index
+     *
+     * @param spreadSheetId ID of the spread sheet
+     * @param sheetTitle title of the sheet
+     * @param startIndex starting index for the rows to be deleted
+     * @param endIndex ending index for the rows to be deleted
+     * (E.g. startIndex = 0 and endIndex = 3 deletes first three rows)
+     * @throws IOException
+     */
 
     public void clearRows(String spreadSheetId,String sheetTitle,Integer startIndex,Integer endIndex)throws IOException{
         Sheets service = getSheetsService();
