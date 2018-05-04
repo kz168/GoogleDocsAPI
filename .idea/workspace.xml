@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="945f7b4a-8ce2-4203-8a2b-c7c132f1af91" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/AutoSheetUpdate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/autoSheetUpdate.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/clientAPI/GSheetsAPI.class" afterPath="$PROJECT_DIR$/build/classes/java/main/clientAPI/GSheetsAPI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/utils/Range.class" afterPath="$PROJECT_DIR$/build/classes/java/main/utils/Range.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/credentials/Google-API-Access-Credentials(Google Sheets)/StoredCredential" afterPath="$PROJECT_DIR$/credentials/Google-API-Access-Credentials(Google Sheets)/StoredCredential" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/GAppsScriptProject_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/GAppsScriptProject_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Groovy/autoSheetUpdate.groovy" afterPath="$PROJECT_DIR$/src/main/Groovy/autoSheetUpdate.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clientAPI/GSheetsAPI.java" afterPath="$PROJECT_DIR$/src/main/java/clientAPI/GSheetsAPI.java" />
-    </list>
+    <list default="true" id="945f7b4a-8ce2-4203-8a2b-c7c132f1af91" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/API_MODULE/.gradle/" />
@@ -1175,6 +1165,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="3798" column="40" lean-forward="false" selection-start-line="3798" selection-start-column="40" selection-end-line="3798" selection-end-column="40" />
+          <folding>
+            <element signature="e#177013#177014#0" expanded="false" />
+            <element signature="e#177054#177055#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
