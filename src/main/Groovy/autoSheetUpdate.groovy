@@ -7,9 +7,11 @@ import org.apache.commons.csv.CSVRecord
 import utils.Range
 
 import java.nio.charset.Charset
+import java.text.SimpleDateFormat
 
 AutoSheetUpdate sheetUpdate = new AutoSheetUpdate()
 sheetUpdate.update()
+//sheetUpdate.getStartDate()
 
 class AutoSheetUpdate{
 	GSheetsAPI gSheetApi
@@ -110,25 +112,22 @@ class AutoSheetUpdate{
 	def getStartDate(){
 		Calendar c = Calendar.getInstance();
 		c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-		def month = c.get(Calendar.MONTH) + 1
 		c.add(Calendar.DATE,-7)
-		def day = c.get(Calendar.DATE)
 
-		def date = month + "/" + day + "/" + c.get(Calendar.YEAR)
-		date = date.replaceAll(/\b(\d{1})\b\//, "0\$1/")
+		SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+    def date = df.format(c.getTime()).toString()
 
 		return date
 	}
 
 	def getEndDate(){
+
 		Calendar c = Calendar.getInstance();
 		c.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
-		def month = c.get(Calendar.MONTH) + 1
 		c.add(Calendar.DATE,-7)
-		def day = c.get(Calendar.DATE)
 
-		def date = month + "/" + day + "/" + c.get(Calendar.YEAR)
-		date = date.replaceAll(/\b(\d{1})\b\//, "0\$1/")
+		SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+		def date = df.format(c.getTime()).toString()
 
 		return date
 

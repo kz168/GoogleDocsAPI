@@ -7,10 +7,15 @@ import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.script.Script;
+import com.google.api.services.script.model.Content;
+import com.google.api.services.script.model.ExecutionRequest;
+import com.google.api.services.script.model.File;
+import com.google.api.services.script.model.Operation;
 import token.AuthorizeToken;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -48,7 +53,7 @@ public class GScriptsAPI {
 	 * at ~/.credentials/Google-API-Access-Credentials
 	 */
 	private static final List<String> SCOPES =
-			Arrays.asList("https://www.googleapis.com/auth/script.projects");
+			Arrays.asList("https://www.googleapis.com/auth/script.projects","https://www.googleapis.com/auth/documents");
 
 	private GScriptsAPI(){
 
@@ -94,6 +99,53 @@ public class GScriptsAPI {
 		Script service = gsAPI.getScriptsService();
 
 		Script.Projects projects = service.projects();
+		Content projectContents = projects.getContent("14QVSmsBvpGUWNt7OtB6P7jTwxeiq-T2En0XYss3UIlNDYBT5pUeqhSqQ").execute();
+    List<File> prevFiles = projectContents.getFiles();
+		Iterator<File> iterator = prevFiles.iterator();
+    boolean FILE_CREATE_FLAG = true;
+
+    while(iterator.hasNext()){
+			if(iterator.next().getName().equals("hello")){
+				FILE_CREATE_FLAG = false;
+				break;
+			}
+		}
+
+		if(FILE_CREATE_FLAG){
+			File jsFile = new File()
+					.setName("hello")
+					.setType("SERVER_JS")
+					.setSource("function helloWorld() {\n  Logger.log(\"Hello, world!\");\n}");
+
+			prevFiles.add(jsFile);
+			Content content = new Content().setFiles(prevFiles);
+			Content updatedContent = projects.updateContent("14QVSmsBvpGUWNt7OtB6P7jTwxeiq-T2En0XYss3UIlNDYBT5pUeqhSqQ", content).execute();
+		}
+
+		/*iterator = prevFiles.iterator();
+		while(iterator.hasNext()){
+			File scriptFile = iterator.next();
+			if(scriptFile.getName().equals("Code")){
+				scriptFile.setSource("var doc = DocumentApp.getActiveDocument();\n" + "  var body = doc.getBody();\n" + "  var firstTable = body.getTables()[0];\n" + "  var rowNum = firstTable.getNumRows();\n" + "  var cell\n" + "  while(rowNum--){\n" + "    cell = firstTable.getCell(rowNum, 0)\n" + "    Logger.log(cell.getText());\n" + "  }");
+				Content content = new Content().setFiles(prevFiles);
+				projects.updateContent("14QVSmsBvpGUWNt7OtB6P7jTwxeiq-T2En0XYss3UIlNDYBT5pUeqhSqQ", content).execute();
+				break;
+			}
+		}*/
+
+		for(int index = 0; index < prevFiles.size(); index++){
+			if(prevFiles.get(index).getName().equals("hello")){
+				prevFiles.get(index).setSource("function zawadFunction() {\n" + "  var doc = DocumentApp.getActiveDocument();\n" + "  var body = doc.getBody();\n" + "  var firstTable = body.getTables()[0];\n" + "  var rowNum = firstTable.getNumRows();\n" + "  var cell\n" + "  while(rowNum--){\n" + "   firstTable.getCell(rowNum, 1).replaceText(\"^.*?$\", \"zawad\");\n" + "  }\n" + " \n" + "}");
+				Content content = new Content().setFiles(prevFiles);
+				projects.updateContent("14QVSmsBvpGUWNt7OtB6P7jTwxeiq-T2En0XYss3UIlNDYBT5pUeqhSqQ", content).execute();
+			}
+		}
+
+		ExecutionRequest request = new ExecutionRequest().setFunction("zawadFunction").setDevMode(false);
+
+		Operation op =
+				service.scripts().run("14QVSmsBvpGUWNt7OtB6P7jTwxeiq-T2En0XYss3UIlNDYBT5pUeqhSqQ", request).execute();
+
 
 
 	}
